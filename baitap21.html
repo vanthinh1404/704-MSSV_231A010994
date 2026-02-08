@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài 21 </title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="bt21">
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__logo">704</div>
+        <div>
+          <div class="brand__title">Bài Tập 21</div>
+          <div class="brand__sub">TK4, TK5, K3, K7, K8</div>
+        </div>
+      </div>
+      <nav class="nav">
+       <a href="index.html">🏠 Home</a>
+        <a href="baitap01.html">🎞️ Bài 1</a>
+        <a href="baitap02.html">📝 Bài 2</a>
+        <a href="baitap03.html">🎮 Bài 3</a>
+        <a href="baitap20.html">📘 Bài 20</a>
+        <a href="baitap21.html">📚 Bài 21</a>
+        <a href="about.html">👤 About</a>
+        <a href="contact.html" class="active">✉️ Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center">
+        <h1 style="margin:0">Trang giải Bài 21</h1>
+        <a class="pill" href="index.html">⬅ Về trang chủ</a>
+      </div>
+      <div class="toolbar">
+        <a class="pill" href="#tk4">➡️ TK4</a>
+        <a class="pill" href="#tk5">➡️ TK5</a>
+        <a class="pill" href="#k3">➡️ K3</a>
+        <a class="pill" href="#k7">➡️ K7</a>
+        <a class="pill" href="#k8">➡️ K8</a>
+      </div>
+    </section>
+
+    <!-- TK4 -->
+    <section id="tk4" class="card section">
+      <h2>🗂️ TK4: Tab View (CSS/JS)</h2>
+      <p class="sub">Bấm tab để chỉ hiện nội dung tương ứng.</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+        <button class="tab-btn" data-tab="tab2">Tab 2</button>
+        <button class="tab-btn" data-tab="tab3">Tab 3</button>
+      </div>
+
+      <div id="tab1" class="tab-content active">
+        Nội dung Tab 1: HTML cơ bản (thẻ, form, bảng).
+      </div>
+      <div id="tab2" class="tab-content">
+        Nội dung Tab 2: CSS (flex/grid, responsive).
+      </div>
+      <div id="tab3" class="tab-content">
+        Nội dung Tab 3: JavaScript (DOM, event, localStorage).
+      </div>
+
+      <p class="muted" style="margin-top:10px">
+    </section>
+
+    <!-- TK5 -->
+    <section id="tk5" class="card section">
+      <h2>🪗 TK5: Accordion đơn giản</h2>
+      <p class="sub">Bấm tiêu đề để trượt xuống/lên (max-height + transition).</p>
+
+      <div class="grid2">
+        <div class="acc-item">
+          <button class="acc-head" type="button" data-acc="acc1">Accordion 1 <span>＋</span></button>
+          <div class="acc-body" id="acc1">
+            <p>Nội dung 1: Dùng <code>classList.toggle</code> và <code>scrollHeight</code> để set max-height.</p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" type="button" data-acc="acc2">Accordion 2 <span>＋</span></button>
+          <div class="acc-body" id="acc2">
+            <p>Nội dung 2: Khi đóng thì set <code>maxHeight = 0</code> để hiệu ứng trượt mượt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- K3 -->
+    <section id="k3" class="card section">
+      <h2>🔐 K3: Kiểm tra mật khẩu khớp</h2>
+      <p class="sub">Kiểm tra password và confirm password trước khi submit.</p>
+
+      <form id="reg-form" class="form" style="max-width:520px">
+        <label>Mật khẩu
+          <input id="pass1" type="password" required minlength="6" placeholder="Tối thiểu 6 ký tự" />
+        </label>
+        <label>Nhập lại mật khẩu
+          <input id="pass2" type="password" required minlength="6" placeholder="Nhập lại mật khẩu" />
+        </label>
+        <button class="btn" type="submit">Đăng ký</button>
+        <div id="error-msg" class="err"></div>
+        <div id="ok-msg" class="note"></div>
+      </form>
+    </section>
+
+    <!-- K7 -->
+    <section id="k7" class="card section">
+      <h2>🌄 K7: Hiệu ứng Parallax Scrolling</h2>
+      <p class="sub">Kéo trang để thấy nền di chuyển chậm hơn nội dung.</p>
+
+      <div class="parallax-wrap">
+        <div id="parallax-bg" class="parallax-bg"></div>
+        <div class="parallax-overlay"></div>
+        <div class="parallax-text">Parallax Demo</div>
+      </div>
+
+      <p class="muted" style="margin-top:10px">
+    </section>
+
+    <!-- K8 -->
+    <section id="k8" class="card section">
+      <h2>⚖️ K8: Tính BMI và phân loại</h2>
+      <p class="sub">Nhập cân nặng (kg) và chiều cao (m), tính BMI và phân loại.</p>
+
+      <div class="grid2" style="max-width:720px">
+        <label>Cân nặng (kg)
+          <input id="weight" type="number" min="1" step="0.1" placeholder="VD: 60" />
+        </label>
+        <label>Chiều cao (m)
+          <input id="height" type="number" min="0.5" step="0.01" placeholder="VD: 1.70" />
+        </label>
+      </div>
+
+      <div class="toolbar" style="margin-top:12px">
+        <button class="btn" type="button" id="bmiBtn">Tính BMI</button>
+        <button class="btn btn--ghost" type="button" id="bmiReset">Xóa</button>
+      </div>
+
+      <div id="bmiOut" class="bmi-result"></div>
+      <div class="muted" style="margin-top:6px">
+        Công thức: <code>BMI = cân nặng / (chiều cao * chiều cao)</code>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">704-MSSV 231A010994</div>
+  </footer>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

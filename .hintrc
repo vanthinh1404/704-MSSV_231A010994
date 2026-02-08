@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "no-inline-styles": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "user-select",
+          "-webkit-user-drag"
+        ]
+      }
+    ],
+    "detect-css-reflows/composite": "off"
+  }
+}

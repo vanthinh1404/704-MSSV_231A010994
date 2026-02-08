@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài 1 - Carousel</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-page="bt01">
+  <div class="wrap">
+    <div class="top">
+      <h1 style="margin:0">Bài 1: Carousel hình ảnh</h1>
+      <a class="back" href="index.html">⬅ Về trang chủ</a>
+    </div>
+
+    <div class="carousel" id="carousel">
+      <div class="track" id="track">
+        <div class="slide"><img src="images/anh1.png" alt="Ảnh 1"></div>
+        <div class="slide"><img src="images/anh2.png" alt="Ảnh 2"></div>
+        <div class="slide"><img src="images/anh3.png" alt="Ảnh 3"></div>
+        <div class="slide"><img src="images/anh4.png" alt="Ảnh 4"></div>
+        <div class="slide"><img src="images/anh5.png" alt="Ảnh 5"></div>
+        <div class="slide"><img src="images/anh6.png" alt="Ảnh 6"></div>
+      </div>
+
+      <button class="btn prev" id="prevBtn" aria-label="Prev">❮</button>
+      <button class="btn next" id="nextBtn" aria-label="Next">❯</button>
+      <div class="dots" id="dots"></div>
+    </div>
+     <div class="note">
+      <b>Giải thích tư duy:</b> Dùng biến <code>index</code> quản lý slide hiện tại.
+      Next: <code>(index + 1) % total</code>, Prev: <code>(index - 1 + total) % total</code>
+      để tránh vượt giới hạn. Auto chạy bằng <code>setInterval</code> 3 giây, tạm dừng khi hover để tối ưu.
+    </div>
+  </div>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

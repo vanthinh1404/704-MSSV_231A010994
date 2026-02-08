@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài Tập 2: Danh sách</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-page="bt02">
+  <div class="wrap">
+    <div class="top">
+      <h1 style="margin:0">Bài 2: Danh sách công việc cần làm</h1>
+      <a class="back" href="index.html">⬅ Về trang chủ</a>
+    </div>
+
+    <div class="card">
+      <div class="form">
+        <input id="taskInput" type="text" placeholder="Nhập công việc..." maxlength="80" />
+        <button id="addBtn">Thêm</button>
+        <button class="secondary" id="clearBtn">Xóa hết</button>
+      </div>
+
+      <div class="meta">
+        <div>Tổng: <strong id="count">0</strong> công việc</div>
+        <div>LocalStorage: <strong id="ls">OK</strong></div>
+      </div>
+
+      <ul id="list"></ul>
+    </div>
+     <div class="note">
+      <b>Giải thích tư duy:</b> Dùng mảng <code>tasks</code> làm state.
+      Mỗi lần add/edit/delete chỉ cập nhật mảng rồi gọi <code>render()</code>.
+      LocalStorage lưu JSON: <code>localStorage.setItem(key, JSON.stringify(tasks))</code>
+      giúp reload trang không mất dữ liệu.
+    </div>
+  </div>
+  <script src="js/script.js" defer></script>
+</body>
+</html>

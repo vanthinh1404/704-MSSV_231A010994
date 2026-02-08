@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bài 3 - Game đoán số</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-page="bt03">
+  <div class="wrap">
+    <div class="top">
+      <h1 style="margin:0">Bài 3: Game đoán số (1-100)</h1>
+      <a class="back" href="index.html">⬅ Về trang chủ</a>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <input id="num" type="number" min="1" max="100" placeholder="Nhập số từ 1 đến 100" />
+        <button id="guessBtn">Đoán</button>
+        <button class="secondary" id="resetBtn">Chơi lại</button>
+      </div>
+
+      <div class="hint" id="hint">Hãy nhập số và bấm “Đoán”.</div>
+      <div class="tries" id="tries">Số lần thử: 0</div>
+    </div>
+
+    <div class="note">
+      <b>Giải thích tư duy:</b> Tạo số bí mật bằng
+      <code>Math.floor(Math.random()*100)+1</code>.
+      Mỗi lần nhập sẽ kiểm tra hợp lệ (không NaN, trong 1..100).
+      Nếu đúng thì khóa nút đoán và bật pháo hoa CSS animation.
+    </div>
+  </div>
+
+  <div class="fireworks" id="fireworks"></div>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
